@@ -1,0 +1,139 @@
+<!DOCTYPE ht>
+<html>
+<head>
+	<title></title>
+	<style>
+		section{height: 500px; position: relative;}
+		img{position: absolute; border-radius: 50%;}
+		.pink{background: pink;}
+		.black{background: black;}
+		@keyframes ro{
+			to{transform: rotate(360deg);}
+		}
+		@keyframes ltor{
+			from{left: 100px;}
+			to{left: 500px}
+		}
+		@keyframes rtol{
+			from{right: 100px;}
+			to{right: 500px}
+		}
+		@keyframes bt{
+			from{top: 200px; opacity: 0;}
+			to{top: 100px; opacity: 1;}
+		}
+		#img1{top: 200px;}
+		#img2{top: 100px;}
+		#img3{top: 150px;}
+		#img4{top: 150px; left: 500px;}
+		#img5{top: 100px;}
+		#monitor{position: fixed; background: black;
+		padding: 5px;  top: 0; right: 0;
+			width: 70px; height: 20px;
+			color: white;}
+		#a{background: url(bg.jpg); background-size: cover; background-attachment: fixed;}
+		#b{background: url(bg.jpg); background-size: cover; background-attachment: fixed;}
+		#c{background: url(bg4.jpg); background-size: cover;
+			}
+		.text{width: 200px; color: #353535; position: absolute; left: 800px; top:700px; font-size: 1.0em; line-height: 1.5; opacity: 0.3; font-weight: bold;}
+		.text2{width: 200px; color: #353535; position: absolute; left: 850px; top:700px; font-size: 1.0em; line-height: 1.5; opacity: 0.3; font-weight: bold;}
+		.text3{width: 270px; color: #353535; position: absolute; left: 400px; top:500px; font-size: 1.0em; line-height: 1.5; opacity: 0.3; font-weight: bold;}
+		.text4{width: 200px; color: #353535; position: absolute; left: 850px; top:500px; font-size: 1.0em; line-height: 1.5; opacity: 0.3; font-weight: bold;}
+		.text5{width: 220px; color: white; position: absolute; left: 300px; top:500px; font-size: 1.0em; line-height: 1.5; opacity: 0.3; }
+		.tit{position: absolute; font-size: 85px; font-family: 'Lucida Console'; color: #F15F5F; top: -70px; left: 450px;}
+
+
+	</style>
+</head>
+<body>
+	<section class="blue" id="a">
+		<p class="tit" >카드캡터 체리</p>
+		<img src="1.jpg" style="width: 250px;" id="img1">
+		<div id="t1" class="text">
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+			안녕! 내이른은 유체리야. 평범한 초등학생이지. <br>
+			그런데 나한테 이상한<br>일이 생겼어! 내 이야기<br> 좀 들어줄래?
+
+		</div>
+	</section>
+	<section class="green"id="b">
+		<img src="2.jpg" style="width: 300px;" id="img2">
+		<div id="t2" class="text2">
+			어느날 난 아빠의 서재에서 빛나는 책을 발견했어.그런데 그 안에는 크로우 카드라는 이상한 카드가 봉인되어 있었던거야! 하지만 내가 그걸 다 날려버리는 바람에 나는 카드캡터가 되어 흩어진 크로우 카드를 찾고있어.
+		</div>
+	</section>
+
+	<section class="pink" id="d">
+		<img src="3.gif" style="width: 300px;"id="img3">
+		<div id="t3" class="text3">
+			<br><br><br><br>그리고 이 귀여운 봉제인형은 케로! 내가 열어버린 책 속에서 나타난 <br>봉인의 파수꾼이야. 파수꾼 치곤<br> 좀 귀엽지? 하지만 변신하면 정말<br> 무시무시하다고! 
+		</div>
+	</section>
+
+	<section class="pink" id="c">
+		<img src="4.gif" style="width: 300px;"id="img4">
+		<div id="t4" class="text4">
+			<br>
+			<br>
+			<br>
+			
+			이렇게 나는 마법을 쓰며<br>순식간에 변할 수 있어.<br>그리고 카드들의 힘을 빌려 또다른 카드들과 싸우는<br>거야.
+		</div>
+	</section>
+	<section class="black" id="e">
+		<img src="5.gif" style="width: 400px;"id="img5">
+		<div id="t5" class="text5">
+			<br>
+			<br>
+			<br>
+			이제 나에 대해 조금 알겠지? 나는 오늘도 우리 마을의<br>
+			 이상한 사건들을 없애고<br>
+			 크로우 카드들을 모으기<br>
+			 위해 힘낼거야! 좋아!<br>
+			 봉인-해제!
+	</section>
+		<div id="monitor"></div>
+	<script type="text/javascript">
+		
+		window.onscroll = function(){
+			var t = document.documentElement.scrollTop + document.body.scrollTop;
+			monitor.innerHTML = t. toFixed(1);
+
+			if(t>0){img1.style.animation = "ltor 2s forwards";}
+			else{img1.style.animation = "";}
+
+			if(t>0){t1.style.animation = "bt 2s forwards";}
+			else{ t1.style.animation = "";}
+			
+
+			if(t>200){img2.style.animation = "ltor 2s forwards";}
+			else{img2.style.animation = "";}
+			if(t>200){t2.style.animation = "bt 2s forwards";}
+			else{ t2.style.animation = "";}
+
+			if(t>650){img3.style.animation = "rtol 2s forwards";}
+			else{img3.style.animation = "";}
+			if(t>650){t3.style.animation = "bt 2s forwards";}
+			else{ t3.style.animation = "";}
+
+			if(t>1200){img4.style.animation = "ro 2s infinite";}
+			else{img4.style.animation = "";}
+			if(t>1200){t4.style.animation = "bt 2s forwards";}
+			else{ t4.style.animation = "";}
+
+			if(t>1460){img5.style.animation = "rtol 2s forwards";}
+			else{img5.style.animation = "";}
+			if(t>1461){t5.style.animation = "bt 2s forwards";}
+			else{ t5.style.animation = "";}
+		}
+		
+
+	</script>
+</body>
+</html>
